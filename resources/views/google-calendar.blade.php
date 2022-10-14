@@ -21,16 +21,28 @@
                     </div>
 
                     <div class="mt-6 text-gray-500">
-                        <ul>
-                            <li><strong>Calendar ID:</strong> ko3k9ovgss83mtsggml7hl9pr4@group.calendar.google.com</li>
-                            <li><strong>API key:</strong> AIzaSyCvgS5_dIOvOT4-4dM8QwvAZ6z4PcZ5b8E</li>
-                            <li><strong>Client ID:</strong>
-                                1077430583638-v6j3jgasrrhk3iu6oppf93kgf1rn50l5.apps.googleusercontent.com</li>
-                        </ul>
+                        @if (Auth::user()->email === 'takhir.berdyiev@gmail.com')
+                            <ul>
+                                <li>
+                                    <strong>Calendar ID:</strong>
+                                    ko3k9ovgss83mtsggml7hl9pr4@group.calendar.google.com
+                                </li>
+                                <li>
+                                    <strong>API key:</strong>
+                                    AIzaSyCvgS5_dIOvOT4-4dM8QwvAZ6z4PcZ5b8E
+                                </li>
+                                <li>
+                                    <strong>Client ID:</strong>
+                                    1077430583638-v6j3jgasrrhk3iu6oppf93kgf1rn50l5.apps.googleusercontent.com
+                                </li>
+                            </ul>
+                        @endif
 
-                        <!--Add buttons to initiate auth sequence and sign out-->
-                        <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
-                        <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+                        <div class="flex mt-6">
+                            <button id="authorize_button" onclick="handleAuthClick()"
+                                class="group relative flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Authorize</button>
+                            <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+                        </div>
 
                         <pre id="content" style="white-space: pre-wrap;"></pre>
                     </div>
