@@ -40,8 +40,13 @@
 
                         <div class="flex mt-6">
                             <button id="authorize_button" onclick="handleAuthClick()"
-                                class="group relative flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Authorize</button>
-                            <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+                                class="group relative flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                Authorize
+                            </button>
+                            <button id="signout_button" onclick="handleSignoutClick()"
+                                class="group relative flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                Sign Out
+                            </button>
                         </div>
 
                         <pre id="content" style="white-space: pre-wrap;"></pre>
